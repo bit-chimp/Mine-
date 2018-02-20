@@ -1,7 +1,7 @@
-﻿using AI.Goap.Handler;
+﻿using Libraries.btcp.Goap.src.Handler;
 using UnityEngine;
 
-namespace Assets.Scripts.AI.Goals
+namespace Mine.AI.Goap.Goals
 {
     public class DestroyMineGoal : BaseGoapGoal
     {

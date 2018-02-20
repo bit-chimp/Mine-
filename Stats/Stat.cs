@@ -1,4 +1,4 @@
-﻿namespace Assets.Scripts.Data
+﻿namespace Mine.Stats
 {
     public class Stat
     {

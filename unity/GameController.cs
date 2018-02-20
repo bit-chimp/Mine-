@@ -1,21 +1,12 @@
-﻿using Assets.Scripts.AI.Actions;
-using Assets.Scripts.AI.Goals;
-using Assets.Sources.Gameplay.Mining;
-using Assets.Sources.Gameplay.Mining.Miner;
-using Assets.Sources.Gameplay.Mining.Ore;
-using ECS.AI.Goap;
-using ECS.AI.Sensors.Sight;
-using ECS.Combat;
-using ECS.Core.Movement;
-using ECS.Core.Physics;
-using ECS.Core.transform;
-using Entitas;
-using Mine.ECS.Gameplay.Defenses;
-using Mine.ECS.Gameplay.Enemies;
-using unity.Helpers.Animations;
+﻿using Entitas;
+
+using Libraries.btcp.ECS.src.Core;
+using Mine.ECS;
+using Mine.ECS.Factories;
+using Mine.ECS.Gameplay.Mining.Ore;
 using UnityEngine;
 
-namespace unity
+namespace Mine.unity
 {
     public class GameController : MonoBehaviour
     {

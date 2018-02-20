@@ -1,15 +1,16 @@
-﻿using Assets.Scripts.AI.Actions;
-using Assets.Scripts.AI.Goals;
-using ECS.AI.Goap;
-using ECS.AI.Sensors.Sight;
-using ECS.Combat;
-using ECS.Core.Parenting;
-using Mine.Combat;
-using Mine.Combat.Attacks;
-using unity.Helpers.Animations;
+﻿
+using Libraries.btcp.ECS.src.AI.Sensors.Sight;
+using Libraries.btcp.ECS.src.Combat;
+using Libraries.btcp.ECS.src.Core.Parenting;
+using Libraries.btcp.RPG_Core.src.Combat.Attacks;
+using Libraries.btcp.RPG_Core.src.Directors.Animation;
+using Libraries.btcp.RPG_Core.src.Directors.Combat.Core;
+using Libraries.btcp.src.Extensions;
+using Mine.AI.Goap.Actions;
+using Mine.AI.Goap.Goals;
 using UnityEngine;
 
-namespace Mine.ECS.Gameplay.Defenses
+namespace Mine.ECS.Factories
 {
     public static class DefenseFactory
     {

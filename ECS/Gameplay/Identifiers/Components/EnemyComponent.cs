@@ -1,4 +1,7 @@
-﻿public sealed class EnemyComponent : Entitas.IComponent
+﻿namespace Mine.ECS.Gameplay.Identifiers.Components
 {
-    //flag 
+    public sealed class EnemyComponent : Entitas.IComponent
+    {
+        //flag 
+    }
 }

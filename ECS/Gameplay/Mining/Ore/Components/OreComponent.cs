@@ -1,6 +1,6 @@
 ﻿using Entitas;
 
-namespace Assets.Sources.Gameplay.Mining.Ore.Components
+namespace Mine.ECS.Gameplay.Mining.Ore.Components
 {
     public class OreComponent : IComponent
     {

@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
-using Assets.Scripts;
-using Assets.Scripts.Data;
-using ECS.Core.Movement;
+
+using Mine.Stats;
 using UnityEngine;
 
-namespace Assets.Sources.Gameplay.Mining.Ore
+namespace Mine.ECS.Gameplay.Mining.Ore
 {
     public static class OreFactory
     {

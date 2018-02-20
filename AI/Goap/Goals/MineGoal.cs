@@ -1,11 +1,14 @@
-﻿using ECS.AI.Goap;
+﻿using Libraries.btcp.src.Extensions;
 
-public class MineGoal : EntityGoapGoal
+namespace Mine.AI.Goap.Goals
 {
-    public MineGoal()
+    public class MineGoal : EntityGoapGoal
     {
-        m_goalState.Set("oreAcquired", true);
+        public MineGoal()
+        {
+            m_goalState.Set("oreAcquired", true);
+        }
+    
+    
     }
-    
-    
 }

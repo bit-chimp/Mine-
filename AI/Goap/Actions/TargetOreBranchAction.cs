@@ -1,8 +1,10 @@
-﻿using AI.Goap.Core;
-using ECS.AI.Goap;
-using ECS.AI.Sensors.Targeting;
+﻿
+using Libraries.btcp.ECS.src.AI.Sensors.Targeting;
+using Libraries.btcp.Goap.src.Core;
+using Libraries.btcp.src.Extensions;
 
-namespace Assets.Scripts.AI.Actions
+
+namespace Mine.AI.Goap.Actions
 {
     public class TargetOreBranchAction : EntityGoapAction
     {

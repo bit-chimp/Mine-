@@ -1,6 +1,7 @@
-﻿using Assets.Sources.Gameplay.Mining.Ore.Systems;
+﻿
+using Mine.ECS.Gameplay.Mining.Ore.Logic;
 
-namespace Assets.Sources.Gameplay.Mining.Ore
+namespace Mine.ECS.Gameplay.Mining.Ore
 {
     public class OreSystems : Feature
     {

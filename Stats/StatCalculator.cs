@@ -1,6 +1,4 @@
-﻿using Assets.Scripts.Data;
-
-namespace Assets.Scripts
+﻿namespace Mine.Stats
 {
     public static class StatCalculator
     {

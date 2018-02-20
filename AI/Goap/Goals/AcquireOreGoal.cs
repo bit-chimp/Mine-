@@ -1,7 +1,6 @@
-﻿using AI.Goap.Handler;
-using UnityEngine;
+﻿using Libraries.btcp.Goap.src.Handler;
 
-namespace Assets.Scripts.AI.Goals
+namespace Mine.AI.Goap.Goals
 {
     public class AcquireOreGoal : BaseGoapGoal
     {

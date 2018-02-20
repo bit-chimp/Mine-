@@ -1,7 +1,8 @@
-﻿using AI.Goap.Core;
-using ECS.AI.Goap;
+﻿
+using Libraries.btcp.Goap.src.Core;
+using Libraries.btcp.src.Extensions;
 
-namespace Assets.Scripts.AI.Actions
+namespace Mine.AI.Goap.Actions
  {
      public class TargetMineIntruderAction : EntityGoapAction
      {

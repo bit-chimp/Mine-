@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
-using ECS.AI.Sensors.Targeting;
 using Entitas;
+
+using Libraries.btcp.ECS.src.AI.Sensors.Targeting;
 using UnityEngine;
 
-namespace Assets.Sources.Gameplay.Mining.Ore.Systems
+
+namespace Mine.ECS.Gameplay.Mining.Ore.Logic
 {
     public class CreateOreBranchSystem : ReactiveSystem<GameEntity>
     {

@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
 using Entitas;
 
-namespace Assets.Sources.Gameplay.Mining.Ore.Systems
+
+
+namespace Mine.ECS.Gameplay.Mining.Ore.Logic
 {
     public class RemoveOreVeinSystem : ReactiveSystem<GameEntity>
     {

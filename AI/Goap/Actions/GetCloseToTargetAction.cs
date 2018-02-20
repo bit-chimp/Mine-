@@ -1,12 +1,8 @@
-﻿using System;
-using AI.Goap.Core;
-using AI.Goap.Handler;
-using ECS.AI.Goap;
-using ECS.AI.Sensors.Targeting;
-using Entitas;
+﻿using Libraries.btcp.Goap.src.Core;
+using Libraries.btcp.src.Extensions;
 using UnityEngine;
 
-namespace Assets.Scripts.AI.Actions
+namespace Mine.AI.Goap.Actions
 {
     public class GetCloseToTargetAction : EntityGoapAction
     {

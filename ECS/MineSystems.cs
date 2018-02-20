@@ -1,9 +1,13 @@
-﻿using Assets.Sources.Gameplay.Mining;
+﻿
+using Mine.ECS.Gameplay.Mining;
 
-public sealed class MineSystems : Feature
+namespace Mine.ECS
 {
-    public MineSystems(Contexts contexts) : base("Mine Systems")
+    public sealed class MineSystems : Feature
     {
-        Add(new MiningSystems(contexts));
+        public MineSystems(Contexts contexts) : base("Mine Systems")
+        {
+            Add(new MiningSystems(contexts));
+        }
     }
 }

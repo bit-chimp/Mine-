@@ -1,17 +1,20 @@
-﻿using AI.Goap.Core;
-using ECS.AI.Goap;
+﻿using Libraries.btcp.Goap.src.Core;
+using Libraries.btcp.src.Extensions;
 
-public class MineAction : EntityGoapAction
+namespace Mine.AI.Goap.Actions
 {
-    public MineAction()
+    public class MineAction : EntityGoapAction
     {
-        SetPreCondition("hasOreTargeted", true);
-        SetPreCondition("isTargetKilled", true);
-        SetPostEffect("oreAcquired", true);
-    }
+        public MineAction()
+        {
+            SetPreCondition("hasOreTargeted", true);
+            SetPreCondition("isTargetKilled", true);
+            SetPostEffect("oreAcquired", true);
+        }
 
-    public override void OnRun(GoapState goalState)
-    {
-        OnComplete();
+        public override void OnRun(GoapState goalState)
+        {
+            OnComplete();
+        }
     }
 }

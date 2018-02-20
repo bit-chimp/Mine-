@@ -1,9 +1,7 @@
-﻿using AI.Goap.Core;
-using ECS.AI.Goap;
-using unity.Helpers.Animations;
-using UnityEngine;
+﻿using Libraries.btcp.Goap.src.Core;
+using Libraries.btcp.src.Extensions;
 
-namespace Assets.Scripts.AI.Actions
+namespace Mine.AI.Goap.Actions
 {
     public class RangeAttackAction : EntityGoapAction
     {

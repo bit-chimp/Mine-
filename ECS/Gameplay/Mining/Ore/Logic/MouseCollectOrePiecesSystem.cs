@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 using Entitas;
-using UnityEngine;
 
-namespace Assets.Sources.Gameplay.Mining.Ore.Systems
+namespace Mine.ECS.Gameplay.Mining.Ore.Logic
 {
     public class MouseCollectOrePiecesSystem : ReactiveSystem<GameEntity>
     {
