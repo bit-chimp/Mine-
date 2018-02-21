@@ -1,20 +1,20 @@
 ﻿using Entitas;
-
 using Libraries.btcp.ECS.src.Core;
 using Mine.ECS;
 using Mine.ECS.Factories;
 using Mine.ECS.Gameplay.Mining.Ore;
+using Mine.unity.Rooms;
 using UnityEngine;
 
 namespace Mine.unity
 {
-    public class GameController : MonoBehaviour
+    public class ECSController : MonoBehaviour
     {
         private Contexts m_contexts;
         private Systems m_systems;
 
-        public int miners = 0;
-        public int spiders = 3;
+       
+        private Room m_roomTest;
 
         private void Awake()
         {
@@ -28,27 +28,15 @@ namespace Mine.unity
             m_systems = CreateSystems(m_contexts);
             m_systems.Initialize();
 
-            for (var i = 0; i < miners; i++)
-            {
-                MinerFactory.CreateMiner(m_contexts, new Vector2(Random.Range(-3f, 3f), 0));
-
-            }
-            
-            for (var i = 0; i < spiders; i++)
-            {
-                EnemyFactory.CreateEnemy(m_contexts, new Vector2(Random.Range(-15f, -5f), 0));
-            }
-
-            OreFactory.CreateOreVein(m_contexts.game, new Vector2(5, .5f));
-            DefenseFactory.CreateTurret(m_contexts, new Vector2(0, 3));
+            m_roomTest = RoomManager.CreateRoom();
 
         }
 
         private void AddEntityId(IContext context, IEntity entity)
         {
             var e = entity as GameEntity;
-            if(e != null)
-            e.AddId(e.creationIndex);
+            if (e != null)
+                e.AddId(e.creationIndex);
         }
 
         private void Update()
