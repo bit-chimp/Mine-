@@ -8,6 +8,9 @@ namespace Mine.ECS
         public MineSystems(Contexts contexts) : base("Mine Systems")
         {
             Add(new MiningSystems(contexts));
+            Add(new AddEntityToRoomSystem(contexts));
+            Add(new CreateStartingEntitiesSystem(contexts));
+            Add(new UISystems(contexts));
         }
     }
 }

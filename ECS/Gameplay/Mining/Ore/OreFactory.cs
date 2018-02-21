@@ -8,7 +8,7 @@ namespace Mine.ECS.Gameplay.Mining.Ore
     public static class OreFactory
     {
         private static readonly Stat OrePieces = new Stat(500, .7f);
-        private static readonly Stat BaseBranchHealthPercentage = new Stat(15, .7f);
+        private static readonly Stat BaseBranchHealthPercentage = new Stat(2, .7f);
 
         public static GameEntity CreateOreVein(GameContext context, Vector2 pos)
         {
@@ -22,6 +22,7 @@ namespace Mine.ECS.Gameplay.Mining.Ore
             
             e.isOnGround = true;
             e.isMouseListener = true;
+            e.isCollideable = true;
 
             var pieces = StatCalculator.CalculateAsInt(OrePieces, 1);
             e.AddHealth(pieces, pieces);
@@ -41,6 +42,7 @@ namespace Mine.ECS.Gameplay.Mining.Ore
             e.isKillable = true;
             e.isRemovedWhenDead = true;
             
+            e.AddRoomChild(vein.roomChild.id);
             e.AddParent(vein.id.value);
             e.isOnGround = true;
  
@@ -60,7 +62,19 @@ namespace Mine.ECS.Gameplay.Mining.Ore
             e.isMouseListener = true;
             e.isAffectedByGravity = true;
             e.AddFriction(.8f);
+            e.isCollideable = true;
+            
+            var xForce = Random.Range(-5f, 5f);
+            var yForce = Random.Range(5f, 9f);
+            e.AddExplosiveForce(new Vector2(xForce, yForce));
+            e.isCarryable = false;
+            e.isOnGround = false;
+
             return e;
+        }
+
+        public static void CreateCollectedOrePiece(string id, float value, float weight)
+        {
         }
     }
 }

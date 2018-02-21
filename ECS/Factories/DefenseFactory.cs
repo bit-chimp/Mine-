@@ -1,5 +1,4 @@
-﻿
-using Libraries.btcp.ECS.src.AI.Sensors.Sight;
+﻿using Libraries.btcp.ECS.src.AI.Sensors.Sight;
 using Libraries.btcp.ECS.src.Combat;
 using Libraries.btcp.ECS.src.Core.Parenting;
 using Libraries.btcp.RPG_Core.src.Combat.Attacks;
@@ -14,7 +13,7 @@ namespace Mine.ECS.Factories
 {
     public static class DefenseFactory
     {
-        public static void CreateTurret(Contexts contexts, Vector2 pos)
+        public static GameEntity CreateTurret(Contexts contexts, Vector2 pos)
         {
             var turret = contexts.game.CreateEntity();
 
@@ -25,10 +24,11 @@ namespace Mine.ECS.Factories
             var muzzle = contexts.game.CreateEntity();
             muzzle.AddPrefab("Prefabs/Towers/tower_rifle_gun");
             muzzle.isLookingAtTarget = true;
-            
-            ParentingHelpers.AddParent(muzzle, turret, new Vector2(-0.056f, -0.118f));
-            
-            CombatHelpers.AddCombatComponents(muzzle, 5f, .2f, 3f);
+
+            muzzle.AddParent(turret.id.value);
+            muzzle.AddPositionOffset(new Vector2(-0.056f, -0.118f));
+
+            CombatHelpers.AddCombatComponents(muzzle, 5f, .5f, .1f);
             SightHelpers.AddSightComponents(muzzle, 10f);
 
             var turretAgent = new EntityGoapAgent(contexts, muzzle);
@@ -42,9 +42,9 @@ namespace Mine.ECS.Factories
             muzzle.AddAnimationDirector(turretAnim);
 
             var turretCombat = new CombatDirector(muzzle);
-            turretCombat.AddAttack(new MeleeAttack(muzzle, "tower_rifle_gun_fire", new []{3}));
+            turretCombat.AddAttack(new MeleeAttack(muzzle, "tower_rifle_gun_fire", new[] {3}));
             muzzle.AddCombatDirector(turretCombat);
-
+            return turret;
         }
     }
 }

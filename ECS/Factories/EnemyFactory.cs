@@ -20,6 +20,7 @@ namespace Mine.ECS.Factories
             enemy.AddPrefab("Prefabs/Enemies/spider");
             enemy.AddPosition(pos);
             enemy.isEnemy = true;
+            enemy.isRemovedWhenDead = true;
             
             MovementHelpers.AddMovementComponents(enemy, 2f, .25f, .5f, .8f, 1f);
             SightHelpers.AddSightComponents(enemy, 50);

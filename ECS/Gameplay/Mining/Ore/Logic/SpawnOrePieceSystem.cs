@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using Entitas;
-
 using UnityEngine;
 
 namespace Mine.ECS.Gameplay.Mining.Ore.Logic
@@ -29,12 +28,7 @@ namespace Mine.ECS.Gameplay.Mining.Ore.Logic
             foreach (var branch in entities)
             {
                 var orePiece = OreFactory.CreateOrePiece(m_context, branch.position.value);
-
-                var xForce = Random.Range(-5f, 5f);
-                var yForce = Random.Range(5f, 9f);
-                orePiece.AddExplosiveForce(new Vector2(xForce, yForce));
-                orePiece.isCarryable = false;
-                orePiece.isOnGround = false;
+                orePiece.AddRoomChild(branch.roomChild.id);
                 var yFallPos = branch.position.value.y + Random.Range(-.6f, -.25f);
                 orePiece.AddFallToGround(yFallPos);
             }

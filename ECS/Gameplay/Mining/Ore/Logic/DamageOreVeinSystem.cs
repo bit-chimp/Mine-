@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Entitas;
+using UnityEngine;
 
 
 namespace Mine.ECS.Gameplay.Mining.Ore.Logic
@@ -30,6 +31,11 @@ namespace Mine.ECS.Gameplay.Mining.Ore.Logic
                 var vein = m_context.GetEntityWithId(branch.parent.value);
                 vein.health.value -= 1;
                 vein.ReplaceHealth(vein.health.value, vein.health.total);
+                
+                //TODO : ShakeHelpers?
+                vein.AddShake(new Vector2(.05f, .05f));
+                vein.AddShakeDuration(.25f);
+
             }
         }
     }
